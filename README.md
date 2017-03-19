@@ -10,9 +10,9 @@
 - [x] operator /
 - [x] operator +=
 - [x] operator -=
-- [ ] operator *=
-- [ ] operator /=
-- [ ] operator =
-- [ ] operator ==
+- [x] operator *=
+- [x] operator /=
+- [x] operator =
+- [x] operator ==
 - [ ] operator >>
 - [ ] operator <<
