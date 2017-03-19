@@ -6,10 +6,10 @@
 - [x] default constructor
 - [x] constructor with params
 - [x] copy constructor
-- [ ] operator *
-- [ ] operator /
-- [ ] operator +=
-- [ ] operator -=
+- [x] operator *
+- [x] operator /
+- [x] operator +=
+- [x] operator -=
 - [ ] operator *=
 - [ ] operator /=
 - [ ] operator =
