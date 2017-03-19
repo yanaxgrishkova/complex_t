@@ -1,8 +1,8 @@
-#include <matrix.hpp>
+#include <complex_t.hpp>
 #include <catch.hpp>
 
-SCENARIO("matrix init", "[init]") {
-	matrix_t matrix;
-	REQUIRE(matrix.rows() == 0);
-	REQUIRE(matrix.columns() == 0);
+SCENARIO("complex_t init", "[init]") {
+	complex_t complex;
+	REQUIRE(complex.real_() == 0);
+	REQUIRE(complex.imaginary_() == 0);
 }
