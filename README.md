@@ -3,9 +3,8 @@
 [![Build Status](https://travis-ci.org/yanaxgrishkova/complex_t.svg?branch=master)](https://travis-ci.org/yanaxgrishkova/complex_t)
 - [ ] real
 - [ ] imaginary
-- [ ] default constructor
+- [x] default constructor
 - [ ] constructor with params
-- [ ] default constructor
 - [ ] copy constructor
 - [ ] operator *
 - [ ] operator /
