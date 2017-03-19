@@ -14,6 +14,10 @@ public:
 
 	complex_t(const complex_t&copy);
 
+	float real_();
+
+	float imaginary_();
+
 	complex_t operator * (const complex_t& c2) const;
 
 	complex_t operator / (const complex_t& c2);
@@ -33,4 +37,3 @@ public:
 	friend istream& operator >> (istream&cin, complex_t& result);
 
 	friend ostream& operator << (ostream&cout, const complex_t& result);
-};
