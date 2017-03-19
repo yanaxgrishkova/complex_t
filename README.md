@@ -5,7 +5,7 @@
 - [x] imaginary
 - [x] default constructor
 - [x] constructor with params
-- [ ] copy constructor
+- [x] copy constructor
 - [ ] operator *
 - [ ] operator /
 - [ ] operator +=
