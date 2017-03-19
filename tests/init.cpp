@@ -28,9 +28,9 @@ SCENARIO("operator *") {
 }
 
 SCENARIO("operator /") {
-	complex_t c1(13, 1);
+	complex_t c1(7, 6);
 	complex_t c2(7, 6);
-	complex_t c3(1, 1);
+	complex_t c3(1, 0);
 	REQUIRE((c1/c2)==c3);
 }
 
