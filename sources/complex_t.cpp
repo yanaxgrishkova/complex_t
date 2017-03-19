@@ -38,7 +38,7 @@ complex_t complex_t::operator = (const complex_t& result)
 	return *this;
 }
 
-istream operator >> (istream&cin, complex_t& result)
+istream& operator >> (istream&cin, const complex_t& result)
 {
 	cout << "Please enter the real part of a complex number:" << endl;
 	cin >> result.real;
@@ -48,7 +48,7 @@ istream operator >> (istream&cin, complex_t& result)
 	return cin;
 }
 
-ostream operator << (ostream&cout, const complex_t& result)
+ostream& operator << (ostream&cout, const complex_t& result)
 {
 	if (result.imaginary < 0)
 	{
