@@ -4,8 +4,8 @@
 
 complex_t methods:
 
-- [x] real
-- [x] imaginary
+- [ ] real
+- [ ] imaginary
 - [ ] default constructor
 - [ ] constructor with params
 - [ ] default constructor
