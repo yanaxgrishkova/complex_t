@@ -8,17 +8,11 @@ private:
 	float real;
 	float imaginary;
 public:
-	complex_t() : real(0.0), imaginary(0.0)
-	{}
+	complex_t();
 
-	complex_t(float rl, float img) : real(rl), imaginary(img)
-	{}
+	complex_t(float rl, float img);
 
-	complex_t(const complex_t&copy)
-	{
-		real = copy.real;
-		imaginary = copy.imaginary;
-	}
+	complex_t(const complex_t&copy);
 
 	complex_t operator * (const complex_t& c2) const;
 
