@@ -12,3 +12,10 @@ SCENARIO("constructor with params") {
 	REQUIRE(complex.real_() == 1);
 	REQUIRE(complex.imaginary_() == 2);
 }
+
+SCENARIO("copy constructor") {
+	complex_t complex(1, 2);
+	complex_t copy(complex);
+	REQUIRE(copy.real_() == 1);
+	REQUIRE(copy.imaginary_() == 2);
+}
