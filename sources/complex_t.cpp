@@ -22,13 +22,13 @@ float complex_t::imaginary_()
 	return imaginary;
 }
 
-const bool complex_t::operator == (const complex_t& c2)
+const bool& complex_t::operator == (const complex_t& c2)
 {
 	if ((real == c2.real) && (imaginary == c2.imaginary))
 		return true;
 }
 
-complex_t complex_t::operator = (const complex_t& result)
+complex_t& complex_t::operator = (const complex_t& result)
 {
 	if (this == &result) {
 		return *this;
@@ -59,30 +59,30 @@ ostream& operator << (ostream&cout, const complex_t& result)
 	return cout;
 }
 
-complex_t complex_t::operator * (const complex_t& c2) const
+complex_t& complex_t::operator * (const complex_t& c2) const
 {
 	return complex_t (real*c2.real - imaginary*c2.imaginary, real*c2.imaginary + c2.real*imaginary); 
 }
 
-complex_t complex_t::operator / (const complex_t& c2)
+complex_t& complex_t::operator / (const complex_t& c2)
 {
 	return complex_t ((real*c2.real + imaginary*c2.imaginary) / (c2.real*c2.real + c2.imaginary*c2.imaginary), (c2.real*imaginary - real*c2.imaginary) / (c2.real*c2.real + c2.imaginary*c2.imaginary));
 }
 
-complex_t complex_t::operator += (const complex_t& c2)
+complex_t& complex_t::operator += (const complex_t& c2)
 {
 	real += c2.real;
 	imaginary += c2.imaginary;
 	return *this;
 }
 
-complex_t complex_t::operator -= (const complex_t& c2)
+complex_t& complex_t::operator -= (const complex_t& c2)
 {
 	real -= c2.real;
 	imaginary -= c2.imaginary;
 	return *this;
 }
-complex_t complex_t::operator /= (const complex_t& c2)
+complex_t& complex_t::operator /= (const complex_t& c2)
 {
 	float real_ = (real*c2.real + imaginary*c2.imaginary) / (c2.real*c2.real + c2.imaginary*c2.imaginary);
 	imaginary = (c2.real*imaginary - real*c2.imaginary) / (c2.real*c2.real + c2.imaginary*c2.imaginary);
@@ -90,7 +90,7 @@ complex_t complex_t::operator /= (const complex_t& c2)
 	return *this;
 }
 
-complex_t complex_t::operator *= (const complex_t& c2)
+complex_t& complex_t::operator *= (const complex_t& c2)
 {
 	float real_ = real*c2.real - imaginary*c2.imaginary;
 	imaginary = real*c2.imaginary + c2.real*imaginary;   
