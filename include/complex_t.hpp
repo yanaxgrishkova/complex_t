@@ -34,7 +34,7 @@ public:
 
 	const bool operator == (const complex_t& c2);
 
-	friend istream operator >> (istream&cin, complex_t& result);
+	friend &istream operator >> (istream&cin, const complex_t& result);
 
-	friend ostream operator << (ostream&cout, const complex_t& result);
+	friend &ostream operator << (ostream&cout, const complex_t& result);
 };
