@@ -19,3 +19,8 @@ SCENARIO("copy constructor") {
 	REQUIRE(copy.real_() == 1);
 	REQUIRE(copy.imaginary_() == 2);
 }
+
+SCENARIO("operator *") {
+	complex_t c1(7, 6), c2(5, 4) c3(11, 58);
+	REQUIRE(c1*c2==c3);
+}
