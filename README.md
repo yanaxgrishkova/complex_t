@@ -1,8 +1,6 @@
 # complex_t
 
-[![Build Status] https://travis-ci.org/yanaxgrishkova/complex_t.svg?branch=master (https://travis-ci.org/justcppdeveloper/matrix)
-
-complex_t methods:
+[![Build Status] https://travis-ci.org/yanaxgrishkova/complex_t.svg?branch=master]
 
 - [ ] real
 - [ ] imaginary
