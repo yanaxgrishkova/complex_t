@@ -62,15 +62,14 @@ SCENARIO("operator /=") {
 	REQUIRE((c1*=c2)==c3);
 }
 
-SCENARIO("operator *=") {
-	complex_t c1(7, 6); 
-	complex_t c2(5, 4);
-	complex_t c3(11, 58);
-	REQUIRE((c1*=c2)==c3);
-}
-
 SCENARIO("operator =") {
 	complex_t c1(7, 6); 
 	complex_t c2;
 	REQUIRE((c1=c2)==c1);
+}
+
+SCENARIO("operator ==") {
+	complex_t c1(7, 6); 
+	complex_t c2(7, 6);
+	REQUIRE(c1==c2);
 }
