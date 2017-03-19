@@ -41,9 +41,9 @@ SCENARIO("operator +=") {
 	REQUIRE((c1+=c2)==c3);
 }
 
-SCENARIO("operator +=") {
-	complex_t c1(13, 1); 
+SCENARIO("operator -=") {
+	complex_t c1(13, 10); 
 	complex_t c2(7, 6);
-	complex_t c3(20, 7);
-	REQUIRE((c1+=c2)==c3);
+	complex_t c3(6, 4);
+	REQUIRE((c1-=c2)==c3);
 }
