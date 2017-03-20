@@ -22,7 +22,7 @@ float complex_t::imaginary_()
 	return imaginary;
 }
 
-const bool complex_t::operator == (const complex_t& c2)
+bool complex_t::operator == (const complex_t& c2) const
 {
 	if ((real == c2.real) && (imaginary == c2.imaginary))
 		return true;
@@ -64,7 +64,7 @@ complex_t complex_t::operator * (const complex_t& c2) const
 	return complex_t (real*c2.real - imaginary*c2.imaginary, real*c2.imaginary + c2.real*imaginary); 
 }
 
-complex_t complex_t::operator / (const complex_t& c2)
+complex_t complex_t::operator / (const complex_t& c2) const
 {
 	return complex_t ((real*c2.real + imaginary*c2.imaginary) / (c2.real*c2.real + c2.imaginary*c2.imaginary), (c2.real*imaginary - real*c2.imaginary) / (c2.real*c2.real + c2.imaginary*c2.imaginary));
 }
