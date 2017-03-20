@@ -20,7 +20,7 @@ public:
 
 	complex_t operator * (const complex_t& c2) const;
 
-	complex_t operator / (const complex_t& c2);
+	complex_t operator / (const complex_t& c2) const;
 
 	complex_t operator += (const complex_t& c2);
 
@@ -32,7 +32,7 @@ public:
 
 	complex_t operator = (const complex_t& result); 
 
-	const bool operator == (const complex_t& c2);
+	bool operator == (const complex_t& c2) const;
 
 	friend istream& operator >> (istream&cin, complex_t& result);
 
