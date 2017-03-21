@@ -59,14 +59,14 @@ ostream& operator << (ostream&cout, complex_t& result) const
 	return cout;
 }
 
-complex_t& complex_t::operator * (const complex_t& c2) const
+complex_t complex_t::operator * (const complex_t& c2) const
 {
-	return const complex_t (real*c2.real - imaginary*c2.imaginary, real*c2.imaginary + c2.real*imaginary); 
+	return complex_t (real*c2.real - imaginary*c2.imaginary, real*c2.imaginary + c2.real*imaginary); 
 }
 
-complex_t& complex_t::operator / (const complex_t& c2) const
+complex_t complex_t::operator / (const complex_t& c2) const
 {
-	return const complex_t ((real*c2.real + imaginary*c2.imaginary) / (c2.real*c2.real + c2.imaginary*c2.imaginary), (c2.real*imaginary - real*c2.imaginary) / (c2.real*c2.real + c2.imaginary*c2.imaginary));
+	return complex_t ((real*c2.real + imaginary*c2.imaginary) / (c2.real*c2.real + c2.imaginary*c2.imaginary), (c2.real*imaginary - real*c2.imaginary) / (c2.real*c2.real + c2.imaginary*c2.imaginary));
 }
 
 complex_t& complex_t::operator += (const complex_t& c2)
