@@ -14,23 +14,23 @@ public:
 
 	complex_t(const complex_t&copy);
 
-	float real_();
+	float real_() const;
 
-	float imaginary_();
+	float imaginary_() const;
 
-	complex_t operator * (const complex_t& c2) const;
+	complex_t& operator * (const complex_t& c2) const;
 
-	complex_t operator / (const complex_t& c2) const;
+	complex_t& operator / (const complex_t& c2) const;
 
-	complex_t operator += (const complex_t& c2);
+	complex_t& operator += (const complex_t& c2);
 
-	complex_t operator -= (const complex_t& c2);
+	complex_t& operator -= (const complex_t& c2);
 
-	complex_t operator *= (const complex_t& c2);
+	complex_t& operator *= (const complex_t& c2);
 
-	complex_t operator /= (const complex_t& c2);
+	complex_t& operator /= (const complex_t& c2);
 
-	complex_t operator = (const complex_t& result); 
+	complex_t& operator = (const complex_t& result); 
 
 	bool operator == (const complex_t& c2) const;
 
