@@ -12,12 +12,12 @@ complex_t::complex_t(const complex_t&copy)
 	imaginary = copy.imaginary;
 } 
 
-float complex_t::real_()
+float complex_t::real_() const
 {
 	return real;
 }
 
-float complex_t::imaginary_()
+float complex_t::imaginary_() const
 {
 	return imaginary;
 }
@@ -28,7 +28,7 @@ bool complex_t::operator == (const complex_t& c2) const
 		return true;
 }
 
-complex_t complex_t::operator = (const complex_t& result)
+complex_t& complex_t::operator = (const complex_t& result)
 {
 	if (this == &result) {
 		return *this;
@@ -38,7 +38,7 @@ complex_t complex_t::operator = (const complex_t& result)
 	return *this;
 }
 
-istream& operator >> (istream&cin, complex_t& result)
+istream& operator >> (istream&cin, complex_t& result) const
 {
 	cout << "Please enter the real part of a complex number:" << endl;
 	cin >> result.real;
@@ -48,7 +48,7 @@ istream& operator >> (istream&cin, complex_t& result)
 	return cin;
 }
 
-ostream& operator << (ostream&cout, complex_t& result)
+ostream& operator << (ostream&cout, complex_t& result) const
 {
 	if (result.imaginary < 0)
 	{
@@ -59,30 +59,30 @@ ostream& operator << (ostream&cout, complex_t& result)
 	return cout;
 }
 
-complex_t complex_t::operator * (const complex_t& c2) const
+complex_t& complex_t::operator * (const complex_t& c2) const
 {
 	return complex_t (real*c2.real - imaginary*c2.imaginary, real*c2.imaginary + c2.real*imaginary); 
 }
 
-complex_t complex_t::operator / (const complex_t& c2) const
+complex_t& complex_t::operator / (const complex_t& c2) const
 {
 	return complex_t ((real*c2.real + imaginary*c2.imaginary) / (c2.real*c2.real + c2.imaginary*c2.imaginary), (c2.real*imaginary - real*c2.imaginary) / (c2.real*c2.real + c2.imaginary*c2.imaginary));
 }
 
-complex_t complex_t::operator += (const complex_t& c2)
+complex_t& complex_t::operator += (const complex_t& c2)
 {
 	real += c2.real;
 	imaginary += c2.imaginary;
 	return *this;
 }
 
-complex_t complex_t::operator -= (const complex_t& c2)
+complex_t& complex_t::operator -= (const complex_t& c2)
 {
 	real -= c2.real;
 	imaginary -= c2.imaginary;
 	return *this;
 }
-complex_t complex_t::operator /= (const complex_t& c2)
+complex_t& complex_t::operator /= (const complex_t& c2)
 {
 	float real_ = (real*c2.real + imaginary*c2.imaginary) / (c2.real*c2.real + c2.imaginary*c2.imaginary);
 	imaginary = (c2.real*imaginary - real*c2.imaginary) / (c2.real*c2.real + c2.imaginary*c2.imaginary);
@@ -90,7 +90,7 @@ complex_t complex_t::operator /= (const complex_t& c2)
 	return *this;
 }
 
-complex_t complex_t::operator *= (const complex_t& c2)
+complex_t& complex_t::operator *= (const complex_t& c2)
 {
 	float real_ = real*c2.real - imaginary*c2.imaginary;
 	imaginary = real*c2.imaginary + c2.real*imaginary;   
