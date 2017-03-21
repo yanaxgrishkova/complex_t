@@ -22,7 +22,7 @@ float complex_t::imaginary_() const
 	return imaginary;
 }
 
-bool complex_t::operator == (const complex_t& c2) const
+bool complex_t::operator == (const complex_t& c2)
 {
 	if ((real == c2.real) && (imaginary == c2.imaginary))
 		return true;
@@ -38,7 +38,7 @@ complex_t& complex_t::operator = (const complex_t& result)
 	return *this;
 }
 
-istream& operator >> (istream&cin, complex_t& result) const
+istream& operator >> (istream&cin, complex_t& result)
 {
 	cout << "Please enter the real part of a complex number:" << endl;
 	cin >> result.real;
@@ -48,7 +48,7 @@ istream& operator >> (istream&cin, complex_t& result) const
 	return cin;
 }
 
-ostream& operator << (ostream&cout, complex_t& result) const
+ostream& operator << (ostream&cout, complex_t& result)
 {
 	if (result.imaginary < 0)
 	{
