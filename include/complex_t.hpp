@@ -18,9 +18,9 @@ public:
 
 	float imaginary_() const;
 
-	complex_t& operator * (const complex_t& c2) const;
+	complex_t operator * (const complex_t& c2) const;
 
-	complex_t& operator / (const complex_t& c2) const;
+	complex_t operator / (const complex_t& c2) const;
 
 	complex_t& operator += (const complex_t& c2);
 
