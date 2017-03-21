@@ -32,7 +32,7 @@ public:
 
 	complex_t& operator = (const complex_t& result); 
 
-	bool operator == (const complex_t& c2) const;
+	bool operator == (const complex_t& c2);
 
 	friend istream& operator >> (istream&cin, complex_t& result);
 
