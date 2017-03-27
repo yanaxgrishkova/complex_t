@@ -37,9 +37,9 @@ complex_t& complex_t::operator = (const complex_t& result)
 	return *this;
 }
 
-istream& operator >> (istream is, complex_t& result)
+istream& operator >> (istream& is, complex_t& result)
 {
-	is >> real >> imaginary;
+	is >> result.real >> result.imaginary;
 	return is;
 }
 
