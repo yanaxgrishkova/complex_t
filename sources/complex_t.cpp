@@ -30,43 +30,42 @@ bool complex_t::operator == (const complex_t& c2)
 
 complex_t& complex_t::operator = (const complex_t& result)
 {
-	if (this == &result) {
-		return *this;
+	if (this != &result) {
+		real = result.real;
+		imaginary = result.imaginary;
 	}
-	real = result.real;
-	imaginary = result.imaginary;
 	return *this;
 }
 
-istream& operator >> (istream&cin, complex_t& result)
+istream& operator >> (istream is, complex_t& result)
 {
-	cout << "Please enter the real part of a complex number:" << endl;
-	cin >> result.real;
-	cout << "Please enter the imaginary part of a complex number:" << endl;
-	cin >> result.imaginary;
-	cout << endl;
-	return cin;
+	is >> real >> imaginary;
+	return is;
 }
 
-ostream& operator << (ostream&cout, complex_t& result)
+ostream& operator << (ostream& os, complex_t& result)
 {
 	if (result.imaginary < 0)
 	{
-		cout << result.real << result.imaginary << "i" << endl;
+		os << result.real << result.imaginary << "i" << endl;
 	}
 	else
-		cout << result.real << "+" << result.imaginary << "i" << endl;
-	return cout;
+		os << result.real << "+" << result.imaginary << "i" << endl;
+	return os;
 }
 
 complex_t complex_t::operator * (const complex_t& c2) const
 {
-	return complex_t (real*c2.real - imaginary*c2.imaginary, real*c2.imaginary + c2.real*imaginary); 
+	complex_t tmp(*this);
+	tmp *= c2;
+	return tmp; 
 }
 
 complex_t complex_t::operator / (const complex_t& c2) const
 {
-	return complex_t ((real*c2.real + imaginary*c2.imaginary) / (c2.real*c2.real + c2.imaginary*c2.imaginary), (c2.real*imaginary - real*c2.imaginary) / (c2.real*c2.real + c2.imaginary*c2.imaginary));
+	complex_t tmp(*this);
+	tmp /= c2;
+	return tmp;
 }
 
 complex_t& complex_t::operator += (const complex_t& c2)
